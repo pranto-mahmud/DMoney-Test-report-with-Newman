@@ -1,0 +1,304 @@
+{
+	"id": "5646dbaa-7570-4e83-8916-2b3b6caa3ccd",
+	"name": "dmoney b17",
+	"timestamp": "2025-11-30T16:49:12.493Z",
+	"collection_id": "49377738-6f5e1874-6d85-49e9-917a-150266cc5a29",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 11,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-11-30T16:49:09.362Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ac1c1534-53f0-443a-ba30-f8b8906c26b2",
+			"name": "User Login",
+			"url": "https://dmoney.roadtocareer.net/user/login",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify login is successful": true
+			},
+			"testPassFailCounts": {
+				"Verify login is successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Verify login is successful": true
+				}
+			]
+		},
+		{
+			"id": "1bdd08c2-3e52-41a1-9cae-88764ee2fe59",
+			"name": "User Login with wrong creds",
+			"url": "https://dmoney.roadtocareer.net/user/login",
+			"time": 81,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Verify that user can not login with wrong creds'": true,
+				"Status code is 401 Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Verify that user can not login with wrong creds'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401 Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"Verify that user can not login with wrong creds'": true,
+					"Status code is 401 Unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "be3d9118-9e3b-4a9e-a4c9-0b0f9e153c01",
+			"name": "User list",
+			"url": "https://dmoney.roadtocareer.net/user/list?limit=30",
+			"time": 978,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User list found.": true,
+				"Status code is 200 OK": true
+			},
+			"testPassFailCounts": {
+				"User list found.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				978
+			],
+			"allTests": [
+				{
+					"User list found.": true,
+					"Status code is 200 OK": true
+				}
+			]
+		},
+		{
+			"id": "2cae0ef8-ce67-41e6-a140-a07343a74aa2",
+			"name": "Create User",
+			"url": "https://dmoney.roadtocareer.net/user/create",
+			"time": 97,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify that user is created": true
+			},
+			"testPassFailCounts": {
+				"Verify that user is created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				97
+			],
+			"allTests": [
+				{
+					"Verify that user is created": true
+				}
+			]
+		},
+		{
+			"id": "eec24787-f837-44c4-b8f6-9c6d67df33da",
+			"name": "Create User with existing phone number",
+			"url": "https://dmoney.roadtocareer.net/user/create",
+			"time": 93,
+			"responseCode": {
+				"code": 208,
+				"name": "Already Reported"
+			},
+			"tests": {
+				"Admin can not create user with duplicate phone number": true,
+				"Status code is 208": true
+			},
+			"testPassFailCounts": {
+				"Admin can not create user with duplicate phone number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 208": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				93
+			],
+			"allTests": [
+				{
+					"Admin can not create user with duplicate phone number": true,
+					"Status code is 208": true
+				}
+			]
+		},
+		{
+			"id": "02bffe61-11fd-4b1f-805e-3e6d9ea1c2ba",
+			"name": "Search user",
+			"url": "https://dmoney.roadtocareer.net/user/search/id/99694",
+			"time": 124,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User id is 99694": true,
+				"Verified that user is found.": true,
+				"Status code is 200 Ok": true
+			},
+			"testPassFailCounts": {
+				"User id is 99694": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verified that user is found.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				124
+			],
+			"allTests": [
+				{
+					"User id is 99694": true,
+					"Verified that user is found.": true,
+					"Status code is 200 Ok": true
+				}
+			]
+		},
+		{
+			"id": "801b9dec-f910-475f-94f3-cca7bf2c2ba7",
+			"name": "update user",
+			"url": "https://dmoney.roadtocareer.net/user/update/99694",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				69
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cdbb5582-42db-4221-a551-54d9b6704eac",
+			"name": "update user PATCH",
+			"url": "https://dmoney.roadtocareer.net/user/update/99694",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				78
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "63482f3e-66ec-4a19-9f4e-69e26374ccaf",
+			"name": "User delete",
+			"url": "https://dmoney.roadtocareer.net/user/delete/28606",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				68
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1668,
+	"collection": {
+		"requests": [
+			{
+				"id": "ac1c1534-53f0-443a-ba30-f8b8906c26b2",
+				"method": "POST"
+			},
+			{
+				"id": "1bdd08c2-3e52-41a1-9cae-88764ee2fe59",
+				"method": "POST"
+			},
+			{
+				"id": "be3d9118-9e3b-4a9e-a4c9-0b0f9e153c01",
+				"method": "GET"
+			},
+			{
+				"id": "2cae0ef8-ce67-41e6-a140-a07343a74aa2",
+				"method": "POST"
+			},
+			{
+				"id": "eec24787-f837-44c4-b8f6-9c6d67df33da",
+				"method": "POST"
+			},
+			{
+				"id": "02bffe61-11fd-4b1f-805e-3e6d9ea1c2ba",
+				"method": "GET"
+			},
+			{
+				"id": "801b9dec-f910-475f-94f3-cca7bf2c2ba7",
+				"method": "PUT"
+			},
+			{
+				"id": "cdbb5582-42db-4221-a551-54d9b6704eac",
+				"method": "PATCH"
+			},
+			{
+				"id": "63482f3e-66ec-4a19-9f4e-69e26374ccaf",
+				"method": "DELETE"
+			}
+		]
+	}
+}
